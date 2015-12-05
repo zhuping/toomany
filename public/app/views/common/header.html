@@ -1,0 +1,24 @@
+<div class="common-header">
+  <div class="inner-header clearfix">
+    <a href="#!/home/index" class="logo">
+      <i class="tmfont">&#xe600;</i>
+      <span>图米粒</span>
+    </a>
+    <ul class="nav">
+    {{#menuList}}
+      <li {{#active}}class="active"{{/active}}><a href="#!{{path}}">{{text}}</a></li>
+    {{/menuList}}
+    </ul>
+    {{#if loginUser}}
+    <div class="signIn">
+      <a href="#!/user/profile?uid={{loginUser.uid}}">{{loginUser.name}}，</a>
+      <a href="/api/user/signOut">退出</a>
+    </div>
+    {{else}}
+    <div class="user">
+      <a href="#!/user/signup">注册</a>
+      <a href="#!/user/signin">登录</a>
+    </div>
+    {{/if}}
+  </div>
+</div>

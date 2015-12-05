@@ -1,0 +1,58 @@
+.page-home {
+  padding-top: 30px;
+  .col-main {
+    float: left;
+    width: 100%;
+    .col-wrap {
+      margin-right: 320px;
+    }
+    .album-list {
+      li {
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+  .col-sub {
+    width: 300px;
+    float: left;
+    margin-left: -300px;
+    .title {
+      font-size: 16px;
+      padding-left: 10px;
+      height: 28px;
+      line-height: 28px;
+    }
+    .table-container {
+      .table {
+        thead {
+          th {
+            padding: 14px 10px 14px 14px;
+          }
+        }
+        tbody {
+          td {
+            padding: 14px 10px 14px 14px;
+            a {
+              &:hover {
+                color: @color-brand;
+              }
+            }
+          }
+        }
+      }
+      .table-hover {
+        tbody {
+          tr {
+            &:hover {
+              td {
+                background-color: #effaf9;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

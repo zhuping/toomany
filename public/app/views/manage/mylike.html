@@ -1,0 +1,29 @@
+<div>
+  <h3 class="title">收藏相册（{{likeLength}}）</h3>
+  <ul class="album-list clearfix">
+    {{#likeAlbum}}
+    <li>
+      <img src="http://7xndo3.com1.z0.glb.clouddn.com/{{poster}}" alt="相册封面" class="poster">
+      <div class="album">
+        <a href="{{url}}" target="_blank" class="album-url"></a>
+        <p class="title">
+          <a href="{{url}}" target="_blank">{{title}}</a></p>
+        <p class="reason">
+          <span>推荐理由：</span>
+          <a href="{{url}}" target="_blank">{{reason}}</a>
+        </p>
+        <p class="msg clearfix">
+          <span class="operate">
+            <a href="javascript:;" class="like mr10" mx-click="like({{id}})" title="喜欢">
+              <i class="tmfont f20">&#xe602;</i><span>{{likeCount}}</span>
+            </a>
+            <a href="/api/album/getArchiver?id={{id}}" mx-click="download" class="save" title="下载">
+              <i class="tmfont mr3">&#xe601;</i><span>{{downCount}}</span>
+            </a>
+          </span>
+        </p>
+      </div>
+    </li>
+    {{/likeAlbum}}
+  </ul>
+</div>

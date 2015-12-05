@@ -1,0 +1,30 @@
+<div class="page-manage">
+  {{#with data}}
+  <div class="user-msg clearfix">
+    <div class="avatar">
+      <img src="http://7xndo3.com1.z0.glb.clouddn.com/{{avatar}}" alt="用户头像">
+    </div>
+    <div class="msg">
+      <p class="title">
+        <span>{{name}}</span>
+        <a href="javascript:;" class="btn btn-brand w120" mx-click="upload"><i class="tmfont f14 mr5">&#xe608;</i>上传相册</a>
+      </p>
+      <p class="sign">签名：{{sign}}</p>
+    </div>
+  </div>
+  {{/with}}
+  <div class="container clearfix">
+    <div class="col-main">
+      <div class="main-wrap" id="J_manage_View">
+        <div class="block-loading"></div>
+      </div>
+    </div>
+    <div class="col-sub">
+      <ul>
+        {{#tabs}}
+        <li {{#if selected}}class="select"{{/if}} mx-click="toggleTab({{tab}})">{{name}}</li>
+        {{/tabs}}
+      </ul>
+    </div>
+  </div>
+</div>

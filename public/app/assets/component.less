@@ -1,0 +1,846 @@
+// table
+.table-container {
+  width: 100%;
+
+  .table {
+    width: 100%;
+    
+    thead {
+      tr {
+        &.tr-nodata {
+          th {
+            color: #ccc;
+          }
+        }
+      }
+      th {
+        background-color: #fafafa;
+        border: none;
+        border-bottom: 1px solid #e6e6e6;
+        color: #999;
+        font-weight: normal;
+        padding: 20px 10px;
+        
+        .mgfont {
+          cursor: pointer;
+          color: #999;
+          font-size: 12px;
+          vertical-align: 1px;
+        }
+        &:first-child {
+          padding-left: 14px;
+        }
+      }
+      .dropdown {
+        .dropdown-toggle {
+          border: none;
+          height: auto;
+          min-width: 0;
+          padding: 0;
+          outline: none;
+
+          &:hover {
+            background: none;
+          }
+        }
+      }
+    }
+    tbody {
+      td {
+        border: none;
+        border-bottom: 1px solid #e6e6e6;
+        padding: 20px 10px;
+
+        &:first-child {
+          padding-left: 14px;
+        }
+
+        .operation {
+          display: none;
+
+          a {
+            color: @color-brand;
+          }
+        }
+      }
+      tr:hover,
+      tr.hover,
+      tr.current {
+        td {
+          background-color: rgba(242,68,85,0.08);
+
+          .operation {
+            display: block;
+          }
+        }
+      }
+      tr.tr-nodata,
+      tr.tr-nodata:hover {
+        td {
+          background: none;
+        }
+      }
+      .list-group {
+        position: relative;
+        padding-left: 195px;
+        height: auto!important;
+        min-height: 100px;
+        height: 100px;
+      
+        .img {
+          border:1px solid #c3c3c3;
+          background-color: #FFF;
+          text-align: center;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+        }
+        .img img {
+          height: 100px;
+          width: 180px;
+          display: block;
+          vertical-align: top;
+        }
+        .attr {
+          float: left;
+          max-width: 400px;
+          _width: 400px;
+        
+          li {
+            margin-bottom: 6px;
+          }
+          .title {
+            height: 17px;
+            overflow: hidden;
+          }
+          .title .H {
+            color: #ff0000;
+          }
+          .summary {
+            height: 34px;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+    tfoot {
+      td {
+        border: none;
+        background-color: #fafafa;
+        padding: 17px 14px;
+      }
+    }
+  }
+}
+
+// dropdown
+.dropdown {
+  position: relative;
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+            background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-sizing: border-box;
+  }
+}
+.dropdown-menu.pull-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu .divider {
+  height: 1px;
+  margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+.dropdown-menu > li > a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #262626;
+  text-decoration: none;
+  background-color: #f5f5f5;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  color: #fff;
+  text-decoration: none;
+  background-color: @color-brand;
+  outline: 0;
+}
+.dropdown-menu > .disabled > a,
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  color: #777;
+}
+.dropdown-menu > .disabled > a:hover,
+.dropdown-menu > .disabled > a:focus {
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+.open > .dropdown-menu {
+  display: block;
+}
+.open > a {
+  outline: 0;
+}
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+.dropdown-menu-left {
+  right: auto;
+  left: 0;
+}
+.dropdown-header {
+  display: block;
+  padding: 3px 20px;
+  font-size: 12px;
+  line-height: 1.42857143;
+  color: #777;
+  white-space: nowrap;
+}
+.dropdown-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 990;
+}
+.pull-right > .dropdown-menu {
+  right: 0;
+  left: auto;
+}
+.dropup .caret,
+.navbar-fixed-bottom .dropdown .caret {
+  content: "";
+  border-top: 0;
+  border-bottom: 4px solid;
+}
+.dropup .dropdown-menu,
+.navbar-fixed-bottom .dropdown .dropdown-menu {
+  top: auto;
+  bottom: 100%;
+  margin-bottom: 1px;
+}
+@media (min-width: 768px) {
+  .navbar-right .dropdown-menu {
+    right: 0;
+    left: auto;
+  }
+  .navbar-right .dropdown-menu-left {
+    right: auto;
+    left: 0;
+  }
+}
+
+.paginationwrapper .dropdown .caret:before {
+    border-color: #fafafa transparent;
+}
+
+.dropdown.open .caret {
+    border-width: 0 7px 6px;
+}
+
+.dropdown.open .caret:before {
+    top: 1px;
+    border-width: 0 7px 6px;
+}
+.dropdown .dropdown-toggle.btn-default {
+    height: 32px;
+    /*min-width: 100px;*/
+    border: 1px solid #E6E6E6;
+    border-radius: 4px;
+    color: #999;
+    text-align: left;
+    background-color: transparent;
+}
+.dropdown .dropdown-toggle.btn-default:hover {
+    border-color: #CCC;
+}
+.dropdown.open .dropdown-toggle.btn-default {
+    border-color: #CCC;
+    color: #000;
+}
+.dropdown .dropdown-toggle.btn-default .dropdown-toggle-label {
+    display: inline-block;
+    min-width: 56px;
+    text-align: left;
+}
+.dropdown .dropdown-menu {
+    margin-top: 10px;
+    box-shadow: none;
+    border: 1px solid #E6E6E6;
+    padding: 10px 2px;
+    font-size: 12px;
+    min-width: 100px;
+    max-height: 270px;
+    overflow: auto;
+}
+.dropdown .dropdown-menu > li {
+    padding: 4px 10px;
+}
+.dropdown .dropdown-menu > li > a {
+    padding: 3px 10px;
+}
+.dropdown .dropdown-menu > li > a:hover {
+    background-color: #F0F0F0;
+    border-radius: 4px;
+}
+.dropdown .dropdown-menu > .active > a, 
+.dropdown .dropdown-menu > .active > a:hover, 
+.dropdown .dropdown-menu > .active > a:focus {
+    background-color: @color-brand;
+    border-radius: 4px;
+}
+.pagination-statistics .dropdown .dropdown-toggle.btn-default .dropdown-toggle-label {
+    min-width: initial;
+}
+.dropdown .caret_custom {
+  float: none!important;
+}
+
+// pagination
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+.pagination > li {
+  display: inline;
+}
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #333;
+  cursor: default;
+  background-color: @color-brand-hover;
+  border-color: @color-brand-hover;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #777;
+  cursor: not-allowed;
+  background-color: #fff;
+  border-color: #ddd;
+}
+.pagination-lg > li > a,
+.pagination-lg > li > span {
+  padding: 10px 16px;
+  font-size: 18px;
+}
+.pagination-lg > li:first-child > a,
+.pagination-lg > li:first-child > span {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.pagination-lg > li:last-child > a,
+.pagination-lg > li:last-child > span {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+.pagination-sm > li > a,
+.pagination-sm > li > span {
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.pagination-sm > li:first-child > a,
+.pagination-sm > li:first-child > span {
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+.pagination-sm > li:last-child > a,
+.pagination-sm > li:last-child > span {
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+  color: @color-brand;
+}
+
+body .paginationwrapper {
+  padding-top: 10px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+body .paginationwrapper {
+  .clearfix();
+  padding-right: 15px;
+  padding-left: 15px;
+  background-color: #FAFAFA;
+}
+
+body .paginationwrapper .col-md-6 {
+  float: left;
+  width: 50%;
+}
+
+body .paginationwrapper .pagination > li {
+  display: inline;
+}
+
+body .paginationwrapper .pagination > li > a,
+body .paginationwrapper .pagination > li > span {
+  border: none;
+  border-radius: 4px;
+}
+
+body .paginationwrapper .pagination > li.active > a,
+body .paginationwrapper .pagination > li.active > span {
+  background-color: @color-brand;
+  color: #fff;
+}
+
+body .paginationwrapper .pagination > li.active > a:hover, 
+body .paginationwrapper .pagination > li.active > span:hover {
+    background-color: @color-brand-hover;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  background: none;
+}
+body .pagination-statistics .dropdown .dropdown-toggle.btn-default .dropdown-toggle-label {
+  min-width: initial;
+}
+.dropdown .dropdown-toggle.btn-default {
+  height: 32px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  color: #999;
+  text-align: left;
+  background-color: transparent;
+}
+
+// popover
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1060;
+  display: none;
+  max-width: 276px;
+  padding: 1px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: left;
+  white-space: normal;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, .2);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+  border-color: #ebebeb;
+}
+.popover.top {
+  margin-top: -10px;
+}
+.popover.right {
+  margin-left: 10px;
+}
+.popover.bottom {
+  margin-top: 10px;
+}
+.popover.left {
+  margin-left: -10px;
+}
+.popover-title {
+  padding: 8px 14px;
+  margin: 0;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #ebebeb;
+  border-radius: 5px 5px 0 0;
+}
+.popover > .arrow,
+.popover > .arrow:after {
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+}
+.popover > .arrow {
+  border-width: 11px;
+}
+.popover > .arrow:after {
+  content: "";
+  border-width: 10px;
+}
+.popover.top > .arrow {
+  bottom: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, .25);
+  border-bottom-width: 0;
+}
+.popover.top > .arrow:after {
+  bottom: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-color: #fff;
+  border-bottom-width: 0;
+}
+.popover.right > .arrow {
+  top: 50%;
+  left: -11px;
+  margin-top: -11px;
+  border-right-color: #999;
+  border-right-color: rgba(0, 0, 0, .25);
+  border-left-width: 0;
+}
+.popover.right > .arrow:after {
+  bottom: -10px;
+  left: 1px;
+  content: " ";
+  border-right-color: #fff;
+  border-left-width: 0;
+}
+.popover.bottom > .arrow {
+  top: -11px;
+  left: 50%;
+  margin-left: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, .25);
+}
+.popover.bottom > .arrow:after {
+  top: 1px;
+  margin-left: -10px;
+  content: " ";
+  border-top-width: 0;
+  border-bottom-color: #fff;
+}
+.popover.left > .arrow {
+  top: 50%;
+  right: -11px;
+  margin-top: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0, 0, 0, .25);
+}
+.popover.left > .arrow:after {
+  right: 1px;
+  bottom: -10px;
+  content: " ";
+  border-right-width: 0;
+  border-left-color: #fff;
+}
+
+.popover p,
+.popover ul {
+  margin-bottom: 0;
+}
+
+.popover-content {
+  padding: 20px;
+}
+
+.popover .arrow {
+  display: none;
+}
+
+// datepick的样式
+body .datepicker-container {
+  border: 1px solid #E6E6E6 !important;
+  border-radius: 4px !important;
+  box-shadow: none !important;
+  padding: 0 10px;
+}
+
+body .datepicker-container .picker-group {
+  padding: 0px;
+}
+
+body .datepicker-container .picker-group .picker-header {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: middle;
+  padding: 0 15px;
+  border-bottom: 1px solid #E6E6E6;
+  margin-bottom: 0px;
+}
+
+body .datepicker-container .picker-group .picker-header .minus,
+body .datepicker-container .picker-group .picker-header .plus {
+  padding: 8px 0px;
+  color: #999999;
+}
+
+body .datepicker-container .picker-group .picker-header .minus:hover,
+body .datepicker-container .picker-group .picker-header .plus:hover {
+  color: @color-brand;
+}
+
+body .datepicker-container .picker-group .picker-header .minus .brixfont,
+body .datepicker-container .picker-group .picker-header .plus .brixfont {
+  font-size: 12px;
+}
+
+body .datepicker-container .picker-group .picker-header h4 {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  height: 14px;
+  line-height: 14px;
+}
+
+body .datepicker-container .picker-group .picker-body {
+  width: 258px;
+}
+
+body .datepicker-container .picker-group .datepicker-body-description {
+  color: #999999;
+  background-color: #FAFAFA;
+  padding: 0 10px;
+}
+
+body .datepicker-container .picker-group .datepicker-body-value {
+  padding: 0 10px;
+}
+
+body .datepicker-container .picker-group .picker-body > span.active,
+body .datepicker-container .picker-group .picker-body > .datepicker-body-value span.active {
+  color: white;
+  background-color: @color-brand;
+}
+
+.datepicker-container {
+  color: #999999;
+  background-color: #FAFAFA;
+  padding: 0 10px;
+}
+
+body .datepicker-container .picker-group .datepicker-body-value {
+  padding: 0 10px;
+}
+
+body .datepicker-container .picker-group .picker-body > span.active,
+body .datepicker-container .picker-group .picker-body > .datepicker-body-value span.active {
+  color: white;
+  background-color: @color-brand;
+}
+
+body .datepickerwrapper-open .mgfont.up {
+  display: block !important;
+}
+
+body .datepickerwrapper-open .mgfont.down {
+  display: none;
+}
+
+body .datepickerwrapper-trigger {
+  width: 200px;
+  height: 32px;
+}
+
+body .datepickerwrapper {
+  margin-top: 10px;
+}
+
+body .datepickerwrapper.single {
+  border: none;
+  box-shadow: none;
+}
+
+body .datepickerwrapper.multiple {
+  padding: 20px 0px 10px 0px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+body .datepickerwrapper .datepickerwrapper-shortcuts {
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+body .datepickerwrapper .datepickerwrapper-shortcuts .datepickerwrapper-shortcuts-body {
+  width: 240px;
+}
+
+body .datepickerwrapper .datepickerwrapper-shortcuts .datepickerwrapper-shortcuts-body span {
+  height: 16px;
+  line-height: 16px;
+  border-radius: 4px;
+  margin: 0px 5px 10px 0px;
+  width: 62px;
+  font-size: 12px;
+}
+
+body .datepickerwrapper .datepickerwrapper-shortcuts .datepickerwrapper-shortcuts-body span.active {
+  background: @color-brand;
+}
+
+body .datepickerwrapper .datepickerwrapper-inputs {
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+body .datepickerwrapper .datepickerwrapper-inputs .datepickerwrapper-inputs-body input {
+  background-color: #F0F0F0;
+  border: 0;
+  box-shadow: none;
+  font-size: 12px;
+  height: 24px;
+  width: 110px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #E6E6E6;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer .btn {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 4px 14px;
+  font-weight: normal;
+  border: 0;
+  box-sizing: content-box;
+  border-radius: 2px;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer .btn.submit {
+  background-color: @color-brand;
+  color: #FFF;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer .btn.submit:hover {
+  background-color: @color-brand-hover;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer .btn.cancel {
+  background-color: #F0F0F0;
+}
+
+body .datepickerwrapper .datepickerwrapper-footer .btn.cancel:hover {
+  background-color: #E6E6E6;
+}
+
+
+/*选小时依赖*/
+/*.form-control{
+  width: 60px;
+  height: 65px;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+}*/
+.picker-group {
+  border-top: 1px solid #DDD;
+  padding: 15px 0 13px 0 !important;
+  margin-top: -2px;
+}
+.datepicker-container > .timepicker .timepicker-spliter {
+  float: left;
+  font-size: 45px;
+  font-weight: bolder;
+  display: inline-block;
+  width: 29px;
+  color: #555;
+  text-align: center;
+}
+.timepicker-group{
+  .btn{
+    width: 28px;
+    height: 30px;
+  }
+}
+
+.glyphicon {
+  position: relative;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 20px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-minus:before {
+  content: "\2212";
+}
+.glyphicon-plus:before {
+  content: "\2b";
+}

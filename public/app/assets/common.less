@@ -1,0 +1,539 @@
+/*
+ * iconfont字体库
+ * 地址：http://iconfont.cn/showProject?pid=38695
+ */
+@font-face {
+  font-family: 'tmfont';
+  src: url('//at.alicdn.com/t/font_1444310454_578412.eot'); /* IE9*/
+  src: url('//at.alicdn.com/t/font_1444310454_578412.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('//at.alicdn.com/t/font_1444310454_578412.woff') format('woff'), /* chrome、firefox */
+  url('//at.alicdn.com/t/font_1444310454_578412.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  url('//at.alicdn.com/t/font_1444310454_578412.svg#tmfont') format('svg'); /* iOS 4.1- */
+}
+.tmfont {
+  font-family: 'tmfont';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased; /* 1 */
+  -moz-osx-font-smoothing: grayscale; /* 2 */
+}
+
+body, button, input, select, textarea {
+  font-size: 12px;
+  color: #333;
+  line-height: 1.42857143;
+  font-family: "Microsoft YaHei","微软雅黑",STXihei,"华文细黑",Georgia,"Times New Roman",Arial,sans-serif;
+}
+
+a {
+  color: @a-color;
+  outline: none;
+  text-decoration: none;
+}
+a.hover {
+  &:hover {
+    color: @color-brand;
+  }
+}
+
+select {
+  display: none;
+}
+input:focus{outline:0!important}
+a,span,button{
+    &:focus,&:active{
+        outline: none;
+    }
+}
+
+/* 带品牌色的radio */
+input[type="radio"] {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: 1px solid #cccccc;
+  background: #fefefe;
+  box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.50) inset;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+  width: 15px;
+  height: 15px;
+  vertical-align: sub;
+}
+input[type="radio"]:checked {
+  background-color: #52be7f;
+  box-shadow: none;
+  border: none;
+}
+input[type="radio"]:checked:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  width: 5px;
+  height: 5px;
+  background: #fff;
+  -webkit-border-radius: 1em;
+  -moz-border-radius: 1em;
+  border-radius: 1em;
+}
+
+/* 带品牌色的checkbox */
+input[type="checkbox"] {
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: 1px solid #cccccc;
+  background: #fefefe;
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  vertical-align: sub;
+  position: relative;
+}
+input[type="checkbox"]:checked {
+  background-color: #52be7f;
+  box-shadow: none;
+  border: none;
+}
+input[type="checkbox"]:checked:after {
+  content: '\e61f';
+  position: absolute;
+  top: -3px;
+  left: -2px;
+  font-family: 'mgfont';
+  color: #fff;
+  font-size: 18px;
+}
+
+.block-loading {
+  width: 40px;
+  height: 18px;
+  margin: 50px auto;
+  background-image: url(http://img02.taobaocdn.com/tps/i2/T19ZHDXf4fXXc.LCDe-40-18.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*常用的btn common样式，设定高度32px, 依赖btn, 宽度自设定*/
+.btn {
+  display: inline-block;
+  padding: 6px 10px;
+  line-height: 1.42857143;
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+    touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+   -moz-user-select: none;
+    -ms-user-select: none;
+        user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+  color: #333;
+  text-decoration: none;
+}
+.btn:active,
+.btn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+          box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn.btn-default {
+  font-size: 12px;
+}
+.btn:focus, 
+.btn.focus,
+.btn:active, 
+.btn.active
+.btn:active:focus {
+  outline: none;
+  box-shadow: none;
+}
+.btn-default {
+  color: #333;
+  background-color: #fff;
+  border-color: #ccc;
+}
+.btn-common {
+  font-size: 12px;
+  height: 32px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  color: #999;
+  background-color: transparent;
+  overflow: hidden;
+  &:hover {
+    border-color: #CCC;
+  }
+}
+.btn-gray {
+  height: 32px;
+  color: #333;
+  background-color: #F0F0F0;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+      background-color: #E6E6E6;
+  }
+}
+.btn-grayc {
+  height: 32px;
+  color: #333;
+  background-color: #ccc;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: #bbb;
+  }
+}
+.btn-brand {
+  height: 32px;
+  color: #fff;
+  background-color: @color-brand;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: @color-brand-hover;
+    color: #fff;
+  }
+}
+.btn-disabled {
+  height: 32px;
+  color: #ccc;
+  background-color: #f4f4f4;
+  &:hover,
+  &.hover,
+  &:focus,
+  &.focus,
+  &:active,
+  &.active {
+    background-color: #f4f4f4;
+    color: #ccc;
+  }
+}
+
+/* 搜索框 */
+.input_enter_placeholder {
+  color: #cccccc;
+}
+.form_search {
+  position: relative;
+  color: #999999;
+}
+.form_search .s_input {
+  width: 220px;
+  border-radius: 4px;
+  padding-left: 32px;
+}
+.form_search .s_input:hover{
+  border: 1px solid #ccc;
+}
+.form_search .input_enter_icon {
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.form_label {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #333;
+}
+.s_input {
+  border:1px solid #ebebeb;
+  padding:0 9px;
+  height:32px;
+  line-height: 32px;
+  width:328px;
+  box-shadow: none;
+}
+.s_fake_placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+.s_input:focus,.s_input_fake_focus {
+  border-color: @color-brand!important;
+  box-shadow: none;
+} 
+.s_input:hover { 
+  border-color: #ccc;
+}
+.s_input[disabled] { 
+  background-color: #fafafa;
+  color:#ccc;
+}
+.s_input_s {
+  width: 98px!important;
+  display: inline-block;
+} /*最短input，如日预算*/
+.s_input_ms {
+  width: 142px!important;
+  display: inline-block;
+} /*中短input，如起止时间*/
+.s_input_m {
+  width: 200px!important;
+} /*中等长度input，如起始日期选择  宽度待定*/ 
+
+.s_br_6 {
+  border-radius: 6px;
+}
+.s_gap_5 {
+  margin-right: 5px;
+}
+.s_gap_8 {
+  margin-right: 8px;
+}
+.s_gap_20 {
+  margin-right: 20px;
+}
+.s_gap_28 {
+  margin-right: 28px;
+}
+.s_gap_38 {
+  margin-right: 38px;
+}
+.s_gap_92 {
+  margin-right: 92px;
+}
+.s_link {
+  cursor: pointer;
+}
+.s_hr_eb {
+  border-top: 1px solid #ebebeb;
+}
+.s_line_mb10 {
+  margin-bottom: 10px;
+}
+.s_line_mb20 {
+  margin-bottom: 20px;
+}
+.s_line_mb30 {
+  margin-bottom: 30px;
+}
+.s_line_mb {
+  margin-bottom: 40px;
+  position: relative;
+}
+.s_line_mb60 {
+  margin-bottom: 60px;
+}
+.s_line_inline {
+  position: relative;
+}
+.s_fc_e6 {
+  color: #e6e6e6!important;
+}
+/*用于一行中有2个以上需要“专利”input效果的*/
+.s_input {
+  border: 1px solid #ebebeb;
+  padding: 0 9px;
+  height: 32px;
+  line-height: 32px;
+  width: 328px;
+  box-shadow: none;
+}
+.s_textarea {
+  height: 100px;
+  line-height: 18px;
+}
+/*default input*/
+.s_fake_placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 32px;
+  line-height: 32px;
+  padding: 0 10px;
+}
+.s_input:hover {
+  border-color: #ccc;
+}
+.s_input[disabled] {
+  background-color: #fafafa;
+  color: #ccc;
+}
+/*最短input，如日预算*/
+.s_input_ms {
+  width: 142px;
+  display: inline-block;
+}
+/*中短input，如起止时间*/
+.s_input_m {
+  width: 200px;
+}
+
+/*中等长度input，如起始日期选择  宽度待定*/
+.s_label {
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+}
+.s_btn {
+  height: 32px;
+  line-height: 30px;
+  padding: 0 20px;
+  background-color: #2378ff;
+  color: #fff !important;
+  font-size: 12px;
+}
+.s_btn:hover,
+.s_btn:focus {
+  color: #fff;
+}
+.s_btn_gray {
+  background-color: #f0f0f0;
+  color: #333 !important;
+  font-size: 12px;
+}
+.s_btn_gray:hover,
+.s_btn_gray:focus {
+  background-color: #e6e6e6;
+  color: #333;
+}
+.s_radio {
+  margin-top: -1px;
+}
+/*.s_radio[checked]{border-color:#2378ff;}*/
+.s_fl {
+  float: left;
+  _display: inline;
+}
+.s_fr {
+  float: right;
+  _display: inline;
+}
+.s_dib {
+  display: inline-block;
+}
+/*clearfix ux.css里面已有*/
+.s_hide {
+  display: none;
+}
+.s_vam {
+  vertical-align: middle;
+}
+.s_center_b {
+  margin-left: auto;
+  margin-right: auto;
+}
+.s_center_t {
+  text-align: center;
+}
+.s_fc_9 {
+  color: #999!important;
+}
+.s_fc_green {
+  color: @color-brand!important;
+}
+
+/* 相册样式 */
+.album-list {
+  li {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    float: left;
+    margin: 0 20px 20px 0;
+    position: relative;
+    &:hover {
+      .album {
+        transition: transform 0.4s, opacity 0.1s;
+        transform: translateY(0px);
+        opacity: 1;
+      }
+    }
+    .poster {
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+    }
+    .album {
+      background-color: rgba(0, 0, 0, 0.6);
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      color: #fff;
+      padding: 0 10px;
+      transition: transform 0.4s, opacity 0.1s 0.3s;
+      transform: translateY(100%);
+      opacity: 0;
+      box-sizing: border-box;
+      a {
+        color: #fff;
+      }
+      .album-url {
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      .title {
+        font-size: 14px;
+        margin-top: 10px;
+        line-height: 21px;
+        overflow: hidden;
+      }
+      .reason {
+        line-height: 21px;
+        overflow: hidden;
+        margin-top: 10px;
+      }
+      .msg {
+        margin-top: 5px;
+        position: absolute;
+        bottom: 5px;
+        width: 88%;
+        .user {
+          float: left;
+          .avatar {
+            border-radius: 10px;
+            margin-right: 5px;
+            width: 20px;
+            height: 20px;
+          }
+        }
+        .operate {
+          float: right;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+}

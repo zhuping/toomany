@@ -1,0 +1,25 @@
+<div class="dialog-body">
+  <div class="page-upload">
+    <form class="upload_form" role="form" bx-name="app/exts/iform/index" data-helptype="inline">
+      <div class="s_line_mb">
+        <label class="label">相册地址：</label>
+        <input type="text" class="form-control s_input" name="url" data-valid="{required:true,regex:[/^((http|https):\/\/)?www\.douban\.com\/photos\/album\/\d+\/?$/,'请输入有效的豆瓣相册地址']}">
+      </div>
+      <div class="s_line_mb">
+        <label class="label">权限：</label>
+        <label for="public" class="mr20">
+          <input type="radio" name="access" value="1" id="public" checked>&nbsp;公开
+        </label>
+        <label for="private">
+          <input type="radio" name="access" value="0" id="private">&nbsp;私有
+        </label>
+        <i class="tmfont ml10 color-smoke" bx-name="components/popover" data-content="设置为私有，其他人将不能看到。设置成公开，会出现在首页，所有人都可以看到。" data-placement="right">&#xe607;</i>
+      </div>
+      <div class="s_line_mb">
+        <label class="label" style="vertical-align:top;">推荐理由：</label>
+        <textarea class="textarea" name="reason" data-valid="{required:true,length:[1,150,true,'长度在1到150之间，其中中文代表两个字符']}"></textarea>
+      </div>
+      <a href="javascript:;" class="btn btn-brand w100 mr10 submit" mx-click="submit">提交</a>
+    </form>
+  </div>
+</div>

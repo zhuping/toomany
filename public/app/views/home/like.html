@@ -1,0 +1,23 @@
+<div class="mt50 title">
+  收藏排行
+</div>
+<div class="table-container">
+  <table bx-name="components/table" class="table table-hover">
+    <thead>
+      <tr>
+        <th>相册名称</th>
+        <th>收藏次数</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#list}}
+      <tr>
+        <td>
+          <a href="{{url}}" target="_blank">{{title}}</a>
+        </td>
+        <td>{{likeCount}}</td>
+      </tr>
+      {{/list}}
+    </tbody>
+  </table>
+</div>

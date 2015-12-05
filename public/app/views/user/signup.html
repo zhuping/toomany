@@ -1,0 +1,35 @@
+<div class="page-user">
+  <form class="user_form signup_form" role="form" bx-name="app/exts/iform/index" data-helptype="inline">
+    <div class="s_line_mb">
+      <label class="label">用户名：</label>
+      <input type="text" class="form-control s_input" name="name" value="{{name}}" data-valid="{required:true,length:[1,10,true,'长度在1到10之间，其中中文代表两个字符']}">
+    </div>
+    {{#unless isModify}}
+    <div class="s_line_mb">
+      <label class="label">密码：</label>
+      <input type="text" class="form-control s_input" name="password" data-valid="{required:true}">
+    </div>
+    {{/unless}}
+    <div class="s_line_mb error">
+      <label class="label">头像：</label>
+      <input type="file" class="uploader-ghost" mx-change="upload">
+      <a href="javascript:;" class="btn btn-default"><i class="tmfont f12">&#xe606;</i>&nbsp;选择文件</a>
+      <span class="help-inline none" id="J_img_msg"></span>
+      {{#if isModify}}
+      <div class="preview"><img src="http://7xndo3.com1.z0.glb.clouddn.com/{{avatar}}" alt="头像"></div>
+      {{else}}
+      <div class="preview none"><img src="http://g.tbcdn.cn/s.gif"></div>
+      {{/if}}
+    </div>
+    <div class="s_line_mb">
+      <label class="label" style="vertical-align:top;">签名：</label>
+      <textarea class="textarea" name="sign" data-valid="{required:true,length:[1,100,true,'长度在1到100之间，其中中文代表两个字符']}">{{sign}}</textarea>
+    </div>
+    {{#if isModify}}
+    <a href="javascript:;" class="btn btn-brand w100 mr10 submit" mx-click="submit">保存</a>
+    {{else}}
+    <a href="javascript:;" class="btn btn-brand w100 mr10 submit" mx-click="submit">注册</a>
+    <a href="#!/user/signin" class="hover">已有账号？</a>
+    {{/if}}
+  </form>
+</div>

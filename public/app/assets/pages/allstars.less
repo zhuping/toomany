@@ -1,0 +1,121 @@
+.page-allstars {
+  padding-top: 30px;
+  .stars {
+    li {
+      width: 150px;
+      height: 150px;
+      float: left;
+      margin: 0 28px 20px 0;
+      &:nth-child(8n) {
+        margin-right: 0;
+      }
+      .user {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: relative;
+        cursor: pointer;
+        box-shadow: inset 0 0 0 10px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.1);
+        transition: all 0.4s ease-in-out;
+        background-position: center center;
+        background-size: 150px 150px;
+        .msg {
+          position: absolute;
+          background-color: rgba(90, 105, 105, 0.8);
+          width: inherit;
+          height: inherit;
+          border-radius: 50%;
+          opacity: 0;
+          transition: all 0.4s ease-in-out;
+          transform: scale(0);
+          -webkit-backface-visibility: hidden;
+          h3 {
+            color: #fff;
+            letter-spacing: 2px;
+            font-size: 20px;
+            margin: 0 20px;
+            padding-top: 40px;
+            height: 40px;
+            font-family: 'Open Sans', Arial, sans-serif;
+            text-shadow: 0 0 1px #fff, 0 1px 2px rgba(0,0,0,0.3);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+          }
+          p {
+            color: #fff;
+            padding-top: 10px;
+            margin: 0 20px;
+            font-size: 14px;
+            border-top: 1px solid rgba(255,255,255,0.5);
+            opacity: 0;
+            transition: all 1s ease-in-out 0.4s;
+            text-align: center;
+            line-height: 21px;
+          }
+        }
+        &:hover {
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.1);
+          .msg {
+            opacity: 1;
+            transform: scale(1);
+            p {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+  .user-msg {
+    padding: 0 50px;
+    .avatar {
+      float: left;
+      width: 150px;
+      height: 150px;
+      padding: 5px;
+      background-color: #dcdde0;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .msg {
+      float: left;
+      margin-left: 40px;
+      .name {
+        font-size: 22px;
+        margin-top: 20px;
+        line-height: 30px;
+      }
+      .sign {
+        margin-top: 20px;
+        width: 400px;
+        height: 50px;
+        overflow: hidden;
+        line-height: 21px;
+      }
+    }
+  }
+  .container {
+    margin-top: 30px;
+    padding: 0 50px;
+    h3 {
+      font-size: 20px;
+      line-height: 45px;
+      text-indent: 10px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid @color-brand;
+    }
+    .album-list {
+      li {
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

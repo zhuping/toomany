@@ -1,0 +1,15 @@
+node_modules/
+source/
+logs/*.log
+public/uploads/*.jpg
+public/uploads/*.png
+public/uploads/*.gif
+public/download/**/
+public/download/*.zip
+/*.log
+/*.bat
+*.swp
+tags
+.DS_Store
+.idea/*
+.deploys

@@ -1,0 +1,20 @@
+// 通用颜色
+@color-green: #51a300;
+@color-blue: #0066dd;
+@color-red: #ef3000;
+@color-yellow: #fcbc52;
+
+// 品牌色
+@color-brand: #52be7f;
+@color-brand-hover: #479065;
+
+// a连接颜色
+@a-color: #666;
+// a连接hover颜色
+/*@a-color-hover: #ff8800;*/
+
+// Opacity
+.opacity(@opacity) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
+}

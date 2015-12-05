@@ -1,0 +1,46 @@
+.page-user {
+  .user_form {
+    width: 450px;
+    margin: 40px auto 0;
+    input {
+      width: 240px;
+    }
+    .label {
+      width: 80px;
+      display: inline-block;
+      text-align: right;
+    }
+    .uploader-ghost {
+      position: absolute;
+      left: 84px;
+      top: 0;
+      width: 85px;
+      height: 32px;
+      cursor: pointer;
+      opacity: 0;
+      fileter: alpha(opacity=0);
+    }
+    .submit {
+      margin-left: 85px;
+    }
+    .preview {
+      margin: 10px 0 0 85px;
+      width: 136px;
+      height: 136px;
+      overflow: hidden;
+      img {
+        border-radius: 50%;
+        width: 136px;
+        height: 136px;
+      }
+    }
+    textarea {
+      width: 240px;
+      height: 80px;
+      padding: 9px;
+      &:focus {
+        border-color: #52be7f !important;
+      }
+    }
+  }
+}

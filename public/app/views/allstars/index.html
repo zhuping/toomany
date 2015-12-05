@@ -1,0 +1,58 @@
+<div class="page-allstars">
+  {{#unless showDetail}}
+  <ul class="stars clearfix">
+    {{#list}}
+    <li>
+      <div class="user" style="background-image: url('http://7xndo3.com1.z0.glb.clouddn.com/{{avatar}}')">
+        <a href="#!/allstars/index?uid={{uid}}" class="msg">
+          <h3>{{name}}</h3>
+          <p>上传相册<br>{{albumCount}}&nbsp;个</p>
+        </a>
+      </div>
+    </li>
+    {{/list}}
+  </ul>
+  {{/unless}}
+  {{#if showDetail}}
+    {{#with data}}
+    <div class="user-msg clearfix">
+      <div class="avatar">
+        <img src="http://7xndo3.com1.z0.glb.clouddn.com/{{avatar}}" alt="用户头像">
+      </div>
+      <div class="msg">
+        <p class="name">{{name}}</p>
+        <p class="sign">签名：{{sign}}</p>
+      </div>
+    </div>
+    <div class="container">
+      <h3>{{name}}上传的相册（{{len}}）</h3>
+      <ul class="album-list clearfix">
+        {{#albums}}
+        <li>
+          <img src="http://7xndo3.com1.z0.glb.clouddn.com/{{poster}}" alt="相册封面" class="poster">
+          <div class="album">
+            <a href="{{url}}" target="_blank" class="album-url"></a>
+            <p class="title">
+              <a href="{{url}}" target="_blank">{{title}}</a></p>
+            <p class="reason">
+              <span>推荐理由：</span>
+              <a href="{{url}}" target="_blank">{{reason}}</a>
+            </p>
+            <p class="msg clearfix">
+              <span class="operate">
+                <a href="javascript:;" class="like mr10" mx-click="like({{id}})" title="喜欢">
+                  <i class="tmfont f20">&#xe602;</i><span>{{likeCount}}</span>
+                </a>
+                <a href="/api/album/getArchiver?id={{id}}" mx-click="download" class="save" title="下载">
+                  <i class="tmfont mr3">&#xe601;</i><span>{{downCount}}</span>
+                </a>
+              </span>
+            </p>
+          </div>
+        </li>
+        {{/albums}}
+      </ul>
+    </div>
+    {{/with}}
+  {{/if}}
+</div>
