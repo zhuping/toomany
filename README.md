@@ -90,3 +90,7 @@ http://open.weibo.com/development
 
 ### ubuntu下mysql乱码问题
 * 除了网上能搜到的配置修改外，在创建数据库的时候要设置编码 `create database toomany character set utf8;`
+
+### 更新
+最近一次部署，发现使用pm2跑不起来，按提示来看应该是环境不支持es6的问题，所以把node更新到最新版本，并且执行`pm2 update`更新。更新后不再需要添加`harmony`参数了
+* NODE_ENV=production pm2 start server.js
